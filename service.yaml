@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: argocd-nginx
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app.kubernetes.io/name: argocd-nginx
   ports:
     - port: 80
       targetPort: 80
+
 
